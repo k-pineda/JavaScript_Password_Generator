@@ -21,6 +21,7 @@ function getRandomValueArray(array) {
 
   // index option array to get random value
 function generatePassword(array) {
+  var generatePassword="";
   var numberOfCharacters= (Number(prompt("How many characters would you like your password to contain?")));
   var userSpecialCharType=confirm("Click Ok to confirm including special characters.");
   var userNumericCharType=confirm("Click Ok to confirm including numeric characters.");
@@ -33,6 +34,7 @@ function generatePassword(array) {
 var randomSpecialCharacters= getRandomValueArray(specialCharacters);
  passwordarray.push(randomSpecialCharacters)
 
+ return generatePassword;
 }
 
 
