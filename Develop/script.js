@@ -21,8 +21,8 @@ function getRandomValueArray(array) {
 
 // index option array to get random values based on user input of length and criteria of password
 function generatePassword() {
-  var generatePassword = "";
-  var numberOfCharacters = prompt("How many characters would you like your password to contain?");
+  var generatedPassword = "";
+  var numberOfCharacters =prompt("How many characters would you like your password to contain?");
 
   if (numberOfCharacters < 8 && numberOfCharacters > 128) {
     alert("Password longer than 8 or less than 128 characters");
@@ -32,27 +32,27 @@ function generatePassword() {
   if (userSpecialCharType) {
     password += specialCharacters
   }
-  var userNumericCharType = confirm("Click Ok to confirm including numeric characters.");
+  //var userNumericCharType = confirm("Click Ok to confirm including numeric characters.");
 
-  if (userNumericCharType) {
-    password += numericCharacters
-  }
-  var userLowercaseCharType = confirm("Click Ok to confirm including lowercase characters.");
+  //if (userNumericCharType) {
+    //password += numericCharacters
+  //}
+  //var userLowercaseCharType = confirm("Click Ok to confirm including lowercase characters.");
 
-  if (userLowercaseCharType) {
-    password += lowercaseCharacters
-  }
-  var userUppercaseCharType = confirm("Click Ok to confirm including uppercase characters.");
+  //if (userLowercaseCharType) {
+  //  password += lowercaseCharacters
+  //}
+  //var userUppercaseCharType = confirm("Click Ok to confirm including uppercase characters.");
 
-  if (userUppercaseCharType) {
-    password += uppercaseCharacters
-  }
+  //if (userUppercaseCharType) {
+    //password += uppercaseCharacters
+  //}
 
   for (i = 0; i === numberOfCharacters.length; i++) {
     generatePassword += getRandomValueArray(password);
   }
 
-  console.log(generatePassword);
+  console.log(generatedPassword);
 }
 
 // Write password to the #password input
