@@ -22,37 +22,38 @@ function getRandomValueArray(array) {
 // index option array to get random values based on user input of length and criteria of password
 function generatePassword() {
   var generatedPassword = "";
-  var numberOfCharacters =prompt("How many characters would you like your password to contain?");
+  var numberOfCharacters = prompt("How many characters would you like your password to contain?");
 
-  if (numberOfCharacters < 8 && numberOfCharacters > 128) {
-    alert("Password longer than 8 or less than 128 characters");
+  if (numberOfCharacters < 8 || numberOfCharacters > 128) {
+    alert("Password must be longer than 8 or less than 128 characters");
+    return;
   }
   var userSpecialCharType = confirm("Click Ok to confirm including special characters.");
 
   if (userSpecialCharType) {
-    password += specialCharacters
+    password = password.concat(specialCharacters);
   }
-  //var userNumericCharType = confirm("Click Ok to confirm including numeric characters.");
+  var userNumericCharType = confirm("Click Ok to confirm including numeric characters.");
 
-  //if (userNumericCharType) {
-    //password += numericCharacters
-  //}
-  //var userLowercaseCharType = confirm("Click Ok to confirm including lowercase characters.");
+  if (userNumericCharType) {
+    password = password.concat(numericCharacters);
+  }
+  var userLowercaseCharType = confirm("Click Ok to confirm including lowercase characters.");
 
-  //if (userLowercaseCharType) {
-  //  password += lowercaseCharacters
-  //}
-  //var userUppercaseCharType = confirm("Click Ok to confirm including uppercase characters.");
+  if (userLowercaseCharType) {
+    password = password.concat(lowercaseCharacters);
+  }
+  var userUppercaseCharType = confirm("Click Ok to confirm including uppercase characters.");
 
-  //if (userUppercaseCharType) {
-    //password += uppercaseCharacters
-  //}
-
-  for (i = 0; i === numberOfCharacters.length; i++) {
-    generatePassword += getRandomValueArray(password);
+  if (userUppercaseCharType) {
+    password = password.concat(uppercaseCharacters);
   }
 
-  console.log(generatedPassword);
+  for (i = 0; i < numberOfCharacters; i++) {
+    generatedPassword += getRandomValueArray(password);
+  }
+
+  return generatedPassword;
 }
 
 // Write password to the #password input
