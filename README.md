@@ -11,7 +11,7 @@ To use this webpage, at the top right hand side are navigational links to three 
 
 ![Demo of Password Generator](./imgs/Javascript_Password_Generator_Demo.gif)
 
-[Password Generator](https://k-pineda.github.io/JavaScript_Password_Generator/)
+[Password Generator Webpage](https://k-pineda.github.io/JavaScript_Password_Generator/)
 
 ## Credits
 
