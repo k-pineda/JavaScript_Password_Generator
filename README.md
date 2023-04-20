@@ -9,8 +9,6 @@ This webpage was created to showcase professional work and provide an introducti
 
 To use this webpage, at the top right hand side are navigational links to three different sections. When clicking on a topic, the browser will move to the section that contains that topics of information. 
 
-![Preview of Password Generator](./imgs/Screenshot%202023-04-20%20111826.png)
-
 ![Demo of Password Generator](./imgs/Javascript_Password_Generator_Demo.gif)
 
 [Password Generator](https://k-pineda.github.io/JavaScript_Password_Generator/)
