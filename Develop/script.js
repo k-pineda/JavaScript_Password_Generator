@@ -49,7 +49,7 @@ function generatePassword() {
     password = password.concat(uppercaseCharacters);
   }
 
-  for (i = 0; i < numberOfCharacters; i++) {
+  for (var i = 0; i < numberOfCharacters; i++) {
     generatedPassword += getRandomValueArray(password);
   }
 
